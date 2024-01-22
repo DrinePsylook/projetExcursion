@@ -1,0 +1,249 @@
+@media screen and (max-width: 1200px) {
+    .formulaire label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        float: none;
+    }
+
+    .invitMail {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .menuNav {
+        display:flex;
+        flex-direction: column;
+        width: 98%;
+        height: auto;
+        position: relative;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .menu a {
+        display: flex; /*transformation en block pour pouvoir le déplacer (gauche, droite, milieu)*/
+        flex-direction: column;
+        min-width:120px;
+    }
+
+    .onglet{
+        width: 5px;
+    }
+
+    li img{
+        width: 50%;
+    }
+
+    .espaceMenu {
+        height: 0px;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Bienvenue*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .ancre1 {
+        flex-direction: column;
+        margin-top: auto;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .bienvenue {
+        width: 100%;
+    }
+
+    .imgSlogan {
+        width: 100%;
+    }
+
+    .descriptionSite {
+        padding: 10%;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*proposition d'excursions*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .ancre2 {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .cartes {
+        justify-content: center;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Recherche*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .ancre3 {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .recherche { /* le fond blanc de la section recherche*/
+        width: 50%;
+    }
+
+    .rechercheDepart{
+        border-radius: 5px; /*léger arrondi de chaque côté*/
+        height: 40px;
+        width: 200px;
+    }
+
+    .parMois {
+        border-radius: 20px 20px 3px 3px ;
+        width: 200px;
+    }
+
+    .parAn {
+        border-radius: 3px 3px 20px 20px ;
+        width: 200px;
+    }
+
+    .rechercheFonction {
+        flex-direction: column;
+        margin: 2%;
+    }
+
+    .rechercheFonction span {
+        margin-bottom: 2%;
+    }
+
+    .formulaireRecherche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Page detail des excursions*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .pgDetail {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .alignDetail {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .textDetail1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        max-width: 600px;
+        width: auto;
+    }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Lightbox*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .modal-content img {
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Formulaire inscription*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .verif {
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .dejaInscrit{
+        flex-direction: column;
+    }
+
+    input {
+        width: 250px;
+    }
+
+    .boutonformu {
+        width: 250px;
+    }
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Page résultat de la recherche*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+    .ancre4 {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .carteRecherche { /*dans les cartes "excursion", l'image et les textes s'affichent l'un en dessous de l'autre*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hexagone2 {
+        margin-right: 0;
+    }
+
+    .formAffichRecherche {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .alerteRecherche {
+        align-items: center;
+    }
+
+    .texteRecherche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        margin-left: 0;
+    }
+
+}

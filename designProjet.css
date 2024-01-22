@@ -1,0 +1,607 @@
+body {
+    font-family: 'Philosopher', sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Menu de navigation*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.menuNav {
+    display:flex;
+    justify-content: space-between; /*alignement du logo et du menu, et séparation de logo et menu chacun à l'autre bout*/
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 73, 149, 0.3) 0px 5px 10px; /*contours ombré autour du menu - le même sera utilisé pour chaque ancre*/
+    position: fixed; /*le menu suit le scroll de la page, ainsi que les ancres*/
+    width: 100%;
+    font-size: 18px;
+    top:0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;  /*espacement entre les noms du menu pucé*/
+    padding: 0;
+    align-items: center;
+}
+
+.menu li {
+    list-style-type: none;  /*disparition des puces dans le menu*/
+}
+
+.menu a {
+    display: block;        /*transformation en block pour pouvoir le déplacer (gauche, droite, milieu)*/
+    min-width:120px;
+    text-decoration: none;
+   }
+
+.onglet {
+    color: #004995;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.active {
+    color: #009fe3;
+    font-weight: bold;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.espaceMenu {           /*ne sert à rien d'autre qu'à laisser un espace pour que le menu ne passe pas
+                            sous la première ancre (ni sous les suivantes)*/
+    height: 70px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Titres*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 35px;
+}
+
+h2 { /*titre consultation*/
+    text-align: center;
+    color: #004995;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+}
+
+h3 { /*titre des excursions*/
+    text-align: center;
+    color: #004995;
+    margin-bottom: 0;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Boutons*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+button {
+    margin: auto;
+    height: 30px;
+    width: 45%;
+}
+
+.boutonConsult:hover {
+    background-color:#05AFF2;
+    color: #22427c;
+    font-weight: bold;
+}
+
+.boutonConsult,
+.boutonConsult2 {
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    background-color: #009fe3;
+    border-width: 2px;
+    text-align: center;
+    color:white;
+    border-radius: 10px;
+    border-color: #05AFF2;
+    font-size: 15px;
+}
+
+.boutonConsult2 {
+    margin-bottom: 20px;
+}
+
+.boutonformu {
+    width: 250px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #009fe3;
+    border-width: 2px;
+    text-align: center;
+    color:white;
+    border-radius: 10px;
+    border-color: #05AFF2;
+    font-size: 15px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Formulaire*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+form {
+    margin: 0 auto;
+    width: 600px; /*largeur du formulaire*/
+    padding: 1em;
+}
+
+.rechercheDepart input {
+    width: 150px;
+    height: 30px;
+}
+
+select {
+    width: 45%;
+    height: 30px;
+    margin-bottom: 1em;
+}
+
+.carteConsultation form{
+    width: 330px;
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 2%;
+}
+
+.formulaire label{
+    display: block;
+    width: 150px;
+    float: left;
+    text-align: right;
+}
+
+.formulaireRecherche{
+    width: 550px;
+}
+
+.formRecherche {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Ancre accueil*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.ancre1 {
+    display: flex;
+    flex-direction: row-reverse; /*permet d'inverser les div : h1 est en premier dans le fichier html,
+                                    mais au lieu d'être du côté gauche, il est à droite*/
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: rgba(0, 73, 149, 0.3) 0px 5px 10px;
+    margin-top: 0.5em;
+}
+
+.bienvenue {
+    color: #FFFFFF;
+    width: 50%;
+    background: #009fe3;
+    font-size: 18px;
+}
+
+.imgSlogan {
+    display: flex;
+    flex-direction: column; /*j'ai mis la div imgSlogan en column pour que le texte slogan puisse
+                                se mettre en bas de l'image avec le justify-content: flex-end.
+                                Si on le met en row, le texte reste en haut de l'image - Essayez :D */
+    justify-content: flex-end;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)),
+    url(imagesProjet/sentierForestier2.jpg);
+    background-size: cover;     /*l'image couvre le block gauche et se retaille quand l'écran s'agrandit ou rétrécit.*/
+    color: #FFFFFF;
+    width: 50%;
+}
+
+.descriptionSite {
+    padding: 10%;
+}
+
+.slogan {  /*Slogan sur la première image*/
+    font-size: 50px;       /*taille de la police*/
+    text-align: center;
+    font-family: 'Fleur De Leah', cursive;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Ancre Consultation*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.ancre2 {   /*le conteneur à fond bleu sur lequel s'affiche les trois cartes*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+    height: auto;
+    margin-top: 0.5em;
+    background: #ebf5fb;
+    padding-bottom: 1em;
+}
+
+.consult { /*permet de mettre le titre consultation et les cartes en colonnes*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartes { /*permet d'afficher les cartes l'une à côté de l'autre*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 1%;
+}
+
+.carteConsultation { /*dans les cartes "excursion", l'image et les textes s'affichent l'un en dessous de l'autre*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    box-shadow: rgba(0, 73, 149, 0.3) 0px 5px 10px; /*ombrage des cartes*/
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    width: 350px;
+    /*height: 500px; !*hauteur unique des cartes, à modifier une fois remplies *!*/
+    background : #FFFFFF;
+    border-radius: 5px;
+}
+
+.imgCartes {
+    object-fit: fill;
+    width: 275px;
+    margin: auto;
+}
+
+.hexagone {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    height: 220px;
+    width: 250px;
+    margin: auto;
+    position: relative;
+}
+
+.detailConsultation {
+    text-align: center; /*alignement du texte des cartes au centre*/
+}
+
+.alerte { /*il ne reste plus que X places*/
+    background: #e74c3c  ;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Ancre Recherche*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.ancre3 {   /*le conteneur image de fond de l'ancre Recherche*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+    height: 600px;
+    margin-top: 0.5em;
+    background-image: url(imagesProjet/pontDuDiable.jpg); /*Image de fond*/
+    background-size: cover;
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+
+.recherche { /* le fond blanc de la section recherche*/
+    background: #FFFFFF;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column; /*affichage en colonne*/
+    align-items: stretch;
+    text-align: center;
+    /*padding-right: 3%;*/
+}
+
+.rechercheDepart{
+    border-radius: 5px; /*léger arrondi de chaque côté*/
+    height: 40px;
+    width: 60%;
+}
+
+.parMois {
+    border-radius: 20px 0% 0% 20px;  /*arrondi sur le côté gauche - menu déroulant recherche par mois*/
+    height: 40px;
+}
+
+.parAn {
+    border-radius: 0% 20px 20px 0% ; /*arrondi sur le côté droit - menu déroulant recherche par an*/
+    height: 40px;
+}
+
+.rechercheFonction {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rechercheFonction span {
+    padding: 10px;
+    border: 2px solid #00b9f2;
+    box-shadow: rgba(0, 185, 242, 0.3) 0 5px 10px;
+    border-radius : 20px;
+    cursor: pointer;
+}
+
+.rechercheFonction span:hover{
+    background-color : #024fa3;
+    border: 2px solid #00b9f2;
+    color:white;
+}
+
+.recherche div {
+    display: none;
+}
+ .divChoix {
+     margin-top : 20%;
+ }
+
+ .choixActif {
+     background-color : #024fa3;
+     border: 2px solid #00b9f2;
+     color:white;
+ }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Page detail des excursions*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.pgDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+    margin-top: 0.5em;
+    border-radius: 5px;
+}
+
+.galerieExcursion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1%;}
+
+.imgExcursion {
+    width: 30%;
+}
+
+.imgExcursion img {
+    object-fit: cover;
+    max-width: 100%;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+}
+
+.alignDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+}
+
+.textDetail1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    box-shadow: rgba(0, 73, 149, 0.3) 0px 5px 10px; /*ombrage des cartes*/
+    background : #FFFFFF;
+    border-radius: 5px;
+    padding: 2em;
+    margin-bottom: 20px;
+}
+
+.libelle {
+    font-weight: bold;
+    font-size : 18px;
+    color : #004995;
+}
+
+.tarif {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    background : #e74c3c  ;
+    color: white;
+    width: 150px;
+    border-radius: 5%;
+    padding: 3%;
+    text-align: center;
+}
+
+.planExcu {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-right: 25%;
+    margin-left: 25%;
+    width: 50%;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+}
+
+.reserver {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Modale Lightbox*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.6);
+}
+
+.modal.show {
+    display: initial;
+}
+
+.modal-content {
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content img {
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 15px;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Page formulaire et verifications*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.invitMail,
+.verif {
+    /*background: #ebf5fb;*/
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+    padding: 2em;
+    border-radius: 5px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #FFFFFF;
+}
+
+.invitMail{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.verif {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.dejaInscrit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Page résultat de la recherche*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.ancre4 {   /*le conteneur à fond bleu sur lequel s'affiche les trois cartes*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 73, 149, 0.3) 0 5px 10px;
+    height: auto;
+    margin-top: 0.5em;
+    background: #ebf5fb;
+    padding-bottom: 1em;
+}
+
+.carteRecherche { /*dans les cartes "excursion", l'image et les textes s'affichent l'un en dessous de l'autre*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 73, 149, 0.3) 0px 5px 10px; /*ombrage des cartes*/
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: 100%;
+    /*height: 500px; !*hauteur unique des cartes, à modifier une fois remplies *!*/
+    background : #FFFFFF;
+    border-radius: 5px;
+}
+
+.hexagone2 {
+    display: flex;
+    flex-direction: column;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    height: 220px;
+    width: 250px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.texteRecherche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+}
+
+.alerte2 {
+    background: #e74c3c  ;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+}
+
+.alerteRecherche {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.formAffichRecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    width: 100%; /*largeur du formulaire*/
+    padding: 1em;
+}
